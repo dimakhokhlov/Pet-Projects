@@ -13,7 +13,7 @@ RUN pip install -r requirements.txt
 RUN pip install flask
 
 # Copy the application code into the container
-COPY ["best_catboost_model.bin", "main.py", "./"] .
+COPY best_xgb_model.bin main.py ./
 
 # Run command
 ENTRYPOINT ["gunicorn", "--bind=0.0.0.0:8989", "main:app"]
